@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Encryption tutorial</title>
+	</head>
+
+	<body onload="" style="background-color:#dddddd; ">
+
+		<table>
+
+			<tr><td>Input:</td><td colspan="3">
+				<svg id="svgIn" width="1040" height="40">
+
+
+					<circle id="CircleIn0" cx="20" cy="20" r="15" style="stroke: #000000; fill: #ee8888;" ></circle>
+					<text id="TextIn0" x="17" y="25" visibility="visible" font-size="12">A</text>
+
+					<circle id="CircleIn1" cx="60" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn1" x="57" y="25" visibility="visible" font-size="12">B</text>
+
+					<circle id="CircleIn2" cx="100" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn2" x="97" y="25" visibility="visible" font-size="12">C</text>
+
+					<circle id="CircleIn3" cx="140" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn3" x="137" y="25" visibility="visible" font-size="12">D</text>
+
+					<circle id="CircleIn4" cx="180" cy="20" r="15" style="stroke: #000000; fill: #88ee88;" ></circle>
+					<text id="TextIn4" x="177" y="25" visibility="visible" font-size="12">E</text>
+
+					<circle id="CircleIn5" cx="220" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn5" x="217" y="25" visibility="visible" font-size="12">F</text>
+
+					<circle id="CircleIn6" cx="260" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn6" x="257" y="25" visibility="visible" font-size="12">G</text>
+
+					<circle id="CircleIn7" cx="300" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn7" x="297" y="25" visibility="visible" font-size="12">H</text>
+
+					<circle id="CircleIn8" cx="340" cy="20" r="15" style="stroke: #000000; fill: #8888ee;" ></circle>
+					<text id="TextIn8" x="337" y="25" visibility="visible" font-size="12">I</text>
+
+					<circle id="CircleIn9" cx="380" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn9" x="377" y="25" visibility="visible" font-size="12">J</text>
+
+					<circle id="CircleIn10" cx="420" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn10" x="417" y="25" visibility="visible" font-size="12">K</text>
+
+					<circle id="CircleIn11" cx="460" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn11" x="457" y="25" visibility="visible" font-size="12">L</text>
+
+					<circle id="CircleIn12" cx="500" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn12" x="497" y="25" visibility="visible" font-size="12">M</text>
+
+					<circle id="CircleIn13" cx="540" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn13" x="537" y="25" visibility="visible" font-size="12">N</text>
+
+					<circle id="CircleIn14" cx="580" cy="20" r="15" style="stroke: #000000; fill: #eeee88;" ></circle>
+					<text id="TextIn14" x="577" y="25" visibility="visible" font-size="12">O</text>
+
+					<circle id="CircleIn15" cx="620" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn15" x="617" y="25" visibility="visible" font-size="12">P</text>
+
+					<circle id="CircleIn16" cx="660" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn16" x="657" y="25" visibility="visible" font-size="12">Q</text>
+
+					<circle id="CircleIn17" cx="700" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn17" x="697" y="25" visibility="visible" font-size="12">R</text>
+
+					<circle id="CircleIn18" cx="740" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn18" x="737" y="25" visibility="visible" font-size="12">S</text>
+
+					<circle id="CircleIn19" cx="780" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn19" x="777" y="25" visibility="visible" font-size="12">T</text>
+
+					<circle id="CircleIn20" cx="820" cy="20" r="15" style="stroke: #000000; fill: #88eeee;" ></circle>
+					<text id="TextIn20" x="817" y="25" visibility="visible" font-size="12">U</text>
+
+					<circle id="CircleIn21" cx="860" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn21" x="857" y="25" visibility="visible" font-size="12">V</text>
+
+					<circle id="CircleIn22" cx="900" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn22" x="897" y="25" visibility="visible" font-size="12">W</text>
+
+					<circle id="CircleIn23" cx="940" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn23" x="937" y="25" visibility="visible" font-size="12">X</text>
+
+					<circle id="CircleIn24" cx="980" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn24" x="977" y="25" visibility="visible" font-size="12">Y</text>
+
+					<circle id="CircleIn25" cx="1020" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextIn25" x="1017" y="25" visibility="visible" font-size="12">Z</text>
+				</svg></td></tr>
+				<tr><td>Output:</td><td colspan="3">
+				<svg id="svgOut" width="1040" height="40">
+
+
+					<circle id="CircleOut0" cx="20" cy="20" r="15" style="stroke: #000000; fill: #ee8888;" ></circle>
+					<text id="TextOut0" x="17" y="25" visibility="visible" font-size="12">A</text>
+
+					<circle id="CircleOut1" cx="60" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut1" x="57" y="25" visibility="visible" font-size="12">B</text>
+
+					<circle id="CircleOut2" cx="100" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut2" x="97" y="25" visibility="visible" font-size="12">C</text>
+
+					<circle id="CircleOut3" cx="140" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut3" x="137" y="25" visibility="visible" font-size="12">D</text>
+
+					<circle id="CircleOut4" cx="180" cy="20" r="15" style="stroke: #000000; fill: #88ee88;" ></circle>
+					<text id="TextOut4" x="177" y="25" visibility="visible" font-size="12">E</text>
+
+					<circle id="CircleOut5" cx="220" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut5" x="217" y="25" visibility="visible" font-size="12">F</text>
+
+					<circle id="CircleOut6" cx="260" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut6" x="257" y="25" visibility="visible" font-size="12">G</text>
+
+					<circle id="CircleOut7" cx="300" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut7" x="297" y="25" visibility="visible" font-size="12">H</text>
+
+					<circle id="CircleOut8" cx="340" cy="20" r="15" style="stroke: #000000; fill: #8888ee;" ></circle>
+					<text id="TextOut8" x="337" y="25" visibility="visible" font-size="12">I</text>
+
+					<circle id="CircleOut9" cx="380" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut9" x="377" y="25" visibility="visible" font-size="12">J</text>
+
+					<circle id="CircleOut10" cx="420" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut10" x="417" y="25" visibility="visible" font-size="12">K</text>
+
+					<circle id="CircleOut11" cx="460" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut11" x="457" y="25" visibility="visible" font-size="12">L</text>
+
+					<circle id="CircleOut12" cx="500" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut12" x="497" y="25" visibility="visible" font-size="12">M</text>
+
+					<circle id="CircleOut13" cx="540" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut13" x="537" y="25" visibility="visible" font-size="12">N</text>
+
+					<circle id="CircleOut14" cx="580" cy="20" r="15" style="stroke: #000000; fill: #eeee88;" ></circle>
+					<text id="TextOut14" x="577" y="25" visibility="visible" font-size="12">O</text>
+
+					<circle id="CircleOut15" cx="620" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut15" x="617" y="25" visibility="visible" font-size="12">P</text>
+
+					<circle id="CircleOut16" cx="660" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut16" x="657" y="25" visibility="visible" font-size="12">Q</text>
+
+					<circle id="CircleOut17" cx="700" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut17" x="697" y="25" visibility="visible" font-size="12">R</text>
+
+					<circle id="CircleOut18" cx="740" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut18" x="737" y="25" visibility="visible" font-size="12">S</text>
+
+					<circle id="CircleOut19" cx="780" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut19" x="777" y="25" visibility="visible" font-size="12">T</text>
+
+					<circle id="CircleOut20" cx="820" cy="20" r="15" style="stroke: #000000; fill: #88eeee;" ></circle>
+					<text id="TextOut20" x="817" y="25" visibility="visible" font-size="12">U</text>
+
+					<circle id="CircleOut21" cx="860" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut21" x="857" y="25" visibility="visible" font-size="12">V</text>
+
+					<circle id="CircleOut22" cx="900" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut22" x="897" y="25" visibility="visible" font-size="12">W</text>
+
+					<circle id="CircleOut23" cx="940" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut23" x="937" y="25" visibility="visible" font-size="12">X</text>
+
+					<circle id="CircleOut24" cx="980" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut24" x="977" y="25" visibility="visible" font-size="12">Y</text>
+
+					<circle id="CircleOut25" cx="1020" cy="20" r="15" style="stroke: #000000; fill: #eeeeee;" ></circle>
+					<text id="TextOut25" x="1017" y="25" visibility="visible" font-size="12">Z</text>
+
+
+
+
+
+				</svg>
+			</td></tr>
+
+			<tr><td colspan="2">Enter message:</td><td><input type="text" id='Message1' style="width:500px;"></td><td></td></tr>
+
+			<tr><td colspan="2">Cipher:</td><td><input type="text" id="Cipher1" readonly style="background-color:#dddddd; border-style:none; width:500px;"></td><td></td></tr>
+
+			<tr><td colspan="2">Decrypted:</td><td><input type="text" id="Decrypted1" readonly style="background-color:#dddddd; border-style:none; width:500px;"></td><td></td></tr>
+
+			<tr><td colspan="5"><br></td></tr>
+
+			<tr>
+				<td>
+
+					<button id="Button1" onclick='ClickSimple()'>Simple Caesar<br>Cipher Encryption</button>
+				</td>
+				<td></td><td>The Caesar cipher (or shift cipher) is one of the simplest forms of encryption. It shifts each letter a set number of places farther along in the alphabet.</td>
+			</tr>
+			<tr>
+				<td>
+					<button id="Button2" onclick='ClickProgressive()'>Progressive Caesar<br>Cipher Encryption</button>
+				</td>
+				<td></td><td>The progressive Caesar cipher shifts each letter in the message one step further than the previous letter to make it harder to crack without being much harder to encrypt and decrypt.</td>
+			</tr>
+
+			<tr>
+				<td>
+					<button id="Button3" onclick='ClickVigenere()'>Vigenère Cipher<br>Encryption</button>
+				</td>
+				<td></td><td>The Vigenère cipher combines a message with a code word adding the first letters of both, second letters of both, etc.</td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					<button id="Button4" onclick='ClickBase26()'>Base26 Block Cipher<br>Encryption</button>
+				</td>
+				<td></td><td>This method performs a mathematical calculation on the letters of the message in a reversable way. This is a block cipher with 8-character blocks.</td>
+			</tr>
+
+			<tr><td colspan="5"><br></td></tr>
+
+			<tr><td colspan="5" id="debugBox1" style="visibility:visible;"></td></tr>
+
+			<tr><td colspan="5" id="debugBox2" style="visibility:hidden;"></td><td></td><td></td></tr>
+
+			<tr><td colspan="2"></td><td></td><td></td></tr>
+
+			<tr><td colspan="5">
+
+			Definitions:<br>
+			<ul>
+			<li><b>Cryptology:</b> the study of codes, or the art of writing and solving them.</li>
+			<li><b>Cryptography:</b> the art of creating codes.</li>
+			<li><b>Cryptanalysis (or "cracking"):</b> the art of revealing the contents of coded messages, breaking codes, that were not intended for you as a recipient.</li>
+			<li><b>Cipher:</b> a secret or disguised way of writing; a code.</li>
+			<li><b>Encryption:</b> the process of converting information or data into a code, especially to prevent unauthorized access.</li>
+			<li><b>Decryption:</b> converting an encrypted cipher into readable text or usable data.</li>
+			<li><b>Block cipher:</b> a method of encrypting text in which a key and algorithm are applied to a block of data at once as a group rather than to one bit at a time.</li>
+			</ul>
+			<BR>
+			Helpful links:<br>
+			<ul>
+			<li>There are many ways to write HTML and JavaScript, but I personally use <a href="https://notepad-plus-plus.org/">Notepad++</a></li>
+			<li><a href="https://ws680.nist.gov/publication/get_pdf.cfm?pub_id=908084">Encryption Basics from NIST</a></li>
+			<li><a href="http://www.eastoftheweb.com/games/index.php?p=games/cryptoquote/random">Try cracking a random substitution code here</a></li>
+			</ul>
+			
+			</td></tr>
+
+			<tr><td colspan="2"></td><td></td><td></td></tr>
+
+		</table>
+
+
+		<script>
+
+			function ClickSimple() {
+				var temp_string = "";
+				var rotation = 0;
+				
+				temp_string = prompt("Please enter number of positions to rotate (positive or negative integer):", "1");
+			
+				if (temp_string == null || temp_string == "") {
+ 					alert("Please enter a rotation amount to proceed.");
+				}
+				else {
+					rotation = parseInt(temp_string);
+					Caesar("Message1", "Cipher1", rotation, 1, true) // Input box, output box, rotation steps, encryption, simple
+					Caesar("Cipher1", "Decrypted1", rotation, -1, true) // Input box, output box, rotation steps, decryption, simple
+				}
+			}
+
+			function ClickProgressive() {
+				var temp_string = "";
+				var rotation = 0;
+				
+				temp_string = prompt("Please enter number of positions to rotate (positive or negative integer):", "1");
+			
+				if (temp_string == null || temp_string == "") {
+ 					alert("Please enter a rotation amount to proceed.");
+				}
+				else {
+					rotation = parseInt(temp_string);
+					Caesar("Message1", "Cipher1", rotation, 1, false); // Input box, output box, rotation steps, encryption, progressive
+					Caesar("Cipher1", "Decrypted1", rotation, -1, false); // Input box, output box, rotation steps, decryption, progressive
+				}
+			}
+
+			// This handles the click event for the Vigenere button.
+			function ClickVigenere() {
+
+				var key = prompt("Please enter your codeword", "TEST");
+
+				if (key == null || key == "") {
+ 					alert("Please enter a keyword to proceed.");
+				} else {
+					Vigenere("Message1", "Cipher1", 1, key); // Input box, output box, encryption, progressive
+					Vigenere("Cipher1", "Decrypted1", -1, key); // Input box, output box, decryption, progressive
+				}
+			}
+
+			
+			function ClickBase26() {
+
+					Base26Encrypt("Message1", "Cipher1", 26, 8); // Input box, output box, base, block size
+					Base26Decrypt("Cipher1", "Decrypted1", 26, 8); // Input box, output box, base, block size
+			}
+
+			// This applies a Caesar substitution cipher. It can run in simple [single rotation] and progressive modes.
+			function Caesar(inbox, outbox, rotation, direction, simple) {
+				var messageBox = document.getElementById(inbox);
+				var rotationBox = document.getElementById("Rotation1");
+				var cipherBox = document.getElementById(outbox);
+				var debugBox = document.getElementById("debugBox1");
+				const A_offset = "A".charCodeAt(0);
+				var message = "";
+				var cipher = "";
+				//var rotation = 1; //parseInt(rotationBox.value);
+				var i = 0; // Counter for loop through message;
+				var j = 0; // Counter for loop through debug;
+				var d; // Direction to rotate letters. 1 for encryption and -1 for decryption;
+				var num_rotations = 0; // Number of rotations to apply. 1 for simple encryption. i + 1 for progressive encryption.
+				var debugOutput = "Encryption debug output:<BR>";
+				var temp_string = "";
+				
+				
+
+
+					message = messageBox.value.toUpperCase();
+
+					for (i = 0; i < message.length; i++) {
+						n = message.charCodeAt(i);
+						d = (direction >= 0) ? 1 : -1;
+						
+
+						if ((n >= "A".charCodeAt(0)) && (n <= "Z".charCodeAt(0))) {
+							num_rotations = (simple === true) ? 1 : num_rotations + 1;
+							n = n - A_offset; // A = 0
+							n = Mod((n + (d * (num_rotations * rotation))),26); 
+							n = n + A_offset;
+
+							debugOutput = debugOutput + message[i];
+							for (j = 0; j < num_rotations; j++) {
+								debugOutput = debugOutput + (rotation >= 0 ? " + " : " - ") + Math.abs(rotation);
+							}
+							debugOutput = debugOutput + " = " + String.fromCharCode(n) + "<BR>";
+						}
+						cipher = cipher + String.fromCharCode(n);
+						
+
+					}
+					
+					cipherBox.value = cipher
+
+					if (direction >= 0) {
+						debugBox.innerHTML = debugOutput;
+						ResetBubbles();
+
+						if (rotation >= 0) {
+							MoveBubbles(0,Math.abs(num_rotations*rotation),.1,4);
+						}
+						else {
+							MoveBubbles(0,Math.abs(num_rotations*rotation),.1,-4);
+						}
+					}
+
+			};
+
+
+			// This resets all of the letter bubbles back to their original positions.
+			function ResetBubbles() {
+				var i = 0;
+
+				for (i = 0; i < 26; i++) {
+					document.getElementById("CircleOut" + i).setAttribute("cx",20 + (40 * i));
+					document.getElementById("TextOut" + i).setAttribute("x",17 + (40 * i));
+				}
+			}
+
+			// A rough, simple animation of moving letters to show the rotation of letters.
+			function MoveBubbles(current_pos, num_rotations, step_size, move_pixels) {
+
+				var i = 0;
+				var temp_circle;
+				var temp_text;
+				var temp_x;
+
+				for (i = 0; i < 26; i++) {
+					temp_circle = document.getElementById("CircleOut" + i);
+					temp_x = parseInt(temp_circle.getAttribute("cx"));
+					temp_x = Mod(temp_x - move_pixels,1040);
+					temp_circle.setAttribute("cx",temp_x);
+
+					temp_text = document.getElementById("TextOut" + i);
+					temp_x = parseInt(temp_text.getAttribute("x"));
+					temp_x = Mod(temp_x - move_pixels,1040);
+					temp_text.setAttribute("x",temp_x);
+				}
+
+				if (current_pos + step_size < num_rotations) {
+					setTimeout(MoveBubbles,100,current_pos + step_size, num_rotations, step_size, move_pixels);
+				}
+
+			}
+			
+			
+			// Fix JavaScript modulo bug.
+			function Mod(n, b) { 
+				return ((n % b) + b) % b;
+			}
+
+
+
+
+			// This function applies a Vigenere polyalphabetic codeword cipher.
+			function Vigenere(inbox, outbox, direction, key) {
+				var messageBox = document.getElementById(inbox);
+				var rotationBox = document.getElementById("Rotation1");
+				var cipherBox = document.getElementById(outbox);
+				var debugBox = document.getElementById("debugBox1");
+				const A_offset = "A".charCodeAt(0);
+				var message = "";
+				var cipher = "";
+				var num_rotations = 0;
+				var i = 0; // Counter for loop through message;
+				var j = 0; // Counter for loop through debug;
+				var d; // Direction to rotate letters. 1 for encryption and -1 for decryption;
+				var num_rotations; // Number of rotations to apply. 1 for simple encryption. i + 1 for progressive encryption.
+				var debugOutput = "Encryption debug output:<BR>";
+				var temp_key = "";
+
+				message = messageBox.value.toUpperCase();
+				key = key.toUpperCase();
+				
+				for (i = 0; i < key.length; i++) {
+					n = key.charCodeAt(i);
+					
+					if ((n >= "A".charCodeAt(0)) && (n <= "Z".charCodeAt(0))) {
+						temp_key = temp_key + key[i];
+					}
+				}
+						
+				key = temp_key; // All non-alphabetic characters removed from the key message to make one long keyword.
+
+
+				for (i = 0; i < message.length; i++) {
+					n = message.charCodeAt(i);
+					d = (direction >= 0) ? 1 : -1;
+					
+
+					if ((n >= "A".charCodeAt(0)) && (n <= "Z".charCodeAt(0))) {
+						num_rotations = num_rotations + 1;
+						n = n - A_offset; // A = 0
+						n = Mod((n + (d * (key.charCodeAt(j) - A_offset))),26); 
+						n = n + A_offset;
+						
+
+						debugOutput = debugOutput + message[i];
+
+						debugOutput = debugOutput + (direction >= 0 ? " + " : " - ") + key[j];
+
+						debugOutput = debugOutput + " = " + String.fromCharCode(n) + "<BR>";
+						j = Mod(j + 1,key.length);
+					}
+					cipher = cipher + String.fromCharCode(n);
+				}
+				
+				cipherBox.value = cipher
+
+				if (direction >= 0) {
+					debugBox.innerHTML = debugOutput; // Only output the steps during encryption.
+				}
+			}; // End of Vigenere
+			
+
+			
+			function Base26Encrypt(inbox, outbox, base, block_size) {
+				var messageBox = document.getElementById(inbox); // Where to read in the plaintext message from.
+				var cipherBox = document.getElementById(outbox); // Where to write the encrypted ciphertext to.
+				var debugBox = document.getElementById("debugBox1"); // Where to output each step of the encryption process.
+				const A_offset = "A".charCodeAt(0); // Shift all of the letter values down to A = 0 to allow modulo math.
+				var message = ""; // Variable to store the plaintext message.
+				var temp_message = "";
+				var cipher = ""; // Variable to store the encrypted cipher.
+				var i = 0; // Counter for loop through message;
+				var j = 0; // Counter for loop through debug;
+				var exponent = 0; // Keep track of the current exponent as we work on a block of text.
+				var debugOutput = "Encryption debug output:<BR>"; // Variable to store the steps of the encryption process.
+				var sum = 0;
+				var temp_sum = 0;
+
+
+				message = messageBox.value.toUpperCase(); // Convert to uppercase for simplicity.
+
+				for (i = 0; i < message.length; i++) {
+					n = message.charCodeAt(i);
+					
+					if ((n >= "A".charCodeAt(0)) && (n <= "Z".charCodeAt(0))) {
+						temp_message = temp_message + String.fromCharCode(n); // For this cipher we will remove all non-alphabetic characters.
+					}
+				}	
+				
+				message = temp_message;
+				
+				while (Mod(message.length,block_size) != 0) {
+				// This is a block cipher, so we need to pad out the message to an whole number of blocks.
+				// We add the least-common character to make it obvious later.
+					message = message + 'Z';
+				}
+				
+				exponent = 0;
+				
+				for (i = 0; i < message.length; i++) {
+					n = message.charCodeAt(i);
+					n = n - A_offset; // A = 0
+					temp_sum = n * Math.pow(base, exponent); 
+					sum = sum + temp_sum;
+
+					debugOutput = debugOutput + message[i];
+					
+					for (j = 1; j <= exponent; j++) {
+						debugOutput = debugOutput + " * " + base;
+					}
+					debugOutput = debugOutput + " = " + (n * Math.pow(base, exponent)) + "<BR>";
+
+					exponent = Mod(exponent + 1,block_size); // Increase the exponent for each character in the block. Reset exponent when reaching a new block.
+					
+					if (exponent == 0){
+						cipher = cipher + " " + sum;
+						debugOutput = debugOutput + sum + "<BR><BR>";
+						sum = 0;
+					}
+					
+				}
+				
+				cipherBox.value = cipher
+
+				debugBox.innerHTML = debugOutput;
+
+			}; // End of Base26Encrypt
+			
+			
+			function Base26Decrypt(inbox, outbox, base, block_size) {
+				var messageBox = document.getElementById(inbox); // Where to read in the encrypted ciphertext from.
+				var cipherBox = document.getElementById(outbox); // Where to write the decrypted plaintext to.
+				const A_offset = "A".charCodeAt(0); // Shift all of the letter values down to A = 0 to allow modulo math.
+				var message = ""; // Variable to store the plaintext message.
+				var temp_message = "";
+				var cipher = ""; // Variable to store the encrypted cipher.
+				var i = 0; // Counter for loop through message;
+				var j = 0; // Counter for loop through debug;
+				var debugOutput = "Encryption debug output:<BR>"; // Variable to store the steps of the encryption process.
+				var sum = 0;
+				var temp_sum = 0;
+
+
+				message = messageBox.value.toUpperCase().trim(); // Convert to uppercase for simplicity.
+				
+				var str_array = message.split(' '); // Split the ciphertext into an array of numbers at each space.
+
+				for (i = 0; i < str_array.length; i++) {
+					// 
+					str_array[i] = str_array[i].trim() // Trim the excess whitespace; Use str_array[i].replace(/^\s*/, "").replace(/\s*$/, "") for really old browsers.;
+					sum = parseInt(str_array[i]); // Convert from string to integer.
+					
+					for (j = 0; j < block_size; j++) {
+						temp_sum = Mod(sum,  base);
+						sum = sum - temp_sum;
+						sum = sum / base;
+						cipher = cipher + String.fromCharCode(temp_sum + A_offset);
+					}
+				}
+				
+				cipherBox.value = cipher;
+
+			}; // End of Base26Decrypt
+		</script>
+	</body>
+
+</html>
