@@ -207,8 +207,8 @@
 				</td>
 				<td></td><td>The Vigenère cipher combines a message with a code word adding the first letters of both, second letters of both, etc.</td>
 			</tr>
-			
-			
+
+
 			<tr>
 				<td>
 					<button id="Button4" onclick='ClickBase26()'>Base26 Block Cipher<br>Encryption</button>
@@ -243,7 +243,7 @@
 			<li><a href="https://ws680.nist.gov/publication/get_pdf.cfm?pub_id=908084">Encryption Basics from NIST</a></li>
 			<li><a href="http://www.eastoftheweb.com/games/index.php?p=games/cryptoquote/random">Try cracking a random substitution code here</a></li>
 			</ul>
-			
+
 			</td></tr>
 
 			<tr><td colspan="2"></td><td></td><td></td></tr>
@@ -256,9 +256,9 @@
 			function ClickSimple() {
 				var temp_string = "";
 				var rotation = 0;
-				
+
 				temp_string = prompt("Please enter number of positions to rotate (positive or negative integer):", "1");
-			
+
 				if (temp_string == null || temp_string == "") {
  					alert("Please enter a rotation amount to proceed.");
 				}
@@ -272,9 +272,9 @@
 			function ClickProgressive() {
 				var temp_string = "";
 				var rotation = 0;
-				
+
 				temp_string = prompt("Please enter number of positions to rotate (positive or negative integer):", "1");
-			
+
 				if (temp_string == null || temp_string == "") {
  					alert("Please enter a rotation amount to proceed.");
 				}
@@ -298,7 +298,7 @@
 				}
 			}
 
-			
+
 			function ClickBase26() {
 
 					Base26Encrypt("Message1", "Cipher1", 26, 8); // Input box, output box, base, block size
@@ -321,8 +321,8 @@
 				var num_rotations = 0; // Number of rotations to apply. 1 for simple encryption. i + 1 for progressive encryption.
 				var debugOutput = "Encryption debug output:<BR>";
 				var temp_string = "";
-				
-				
+
+
 
 
 					message = messageBox.value.toUpperCase();
@@ -330,12 +330,12 @@
 					for (i = 0; i < message.length; i++) {
 						n = message.charCodeAt(i);
 						d = (direction >= 0) ? 1 : -1;
-						
+
 
 						if ((n >= "A".charCodeAt(0)) && (n <= "Z".charCodeAt(0))) {
 							num_rotations = (simple === true) ? 1 : num_rotations + 1;
 							n = n - A_offset; // A = 0
-							n = Mod((n + (d * (num_rotations * rotation))),26); 
+							n = Mod((n + (d * (num_rotations * rotation))),26);
 							n = n + A_offset;
 
 							debugOutput = debugOutput + message[i];
@@ -345,10 +345,10 @@
 							debugOutput = debugOutput + " = " + String.fromCharCode(n) + "<BR>";
 						}
 						cipher = cipher + String.fromCharCode(n);
-						
+
 
 					}
-					
+
 					cipherBox.value = cipher
 
 					if (direction >= 0) {
@@ -401,10 +401,10 @@
 				}
 
 			}
-			
-			
+
+
 			// Fix JavaScript modulo bug.
-			function Mod(n, b) { 
+			function Mod(n, b) {
 				return ((n % b) + b) % b;
 			}
 
@@ -430,29 +430,29 @@
 
 				message = messageBox.value.toUpperCase();
 				key = key.toUpperCase();
-				
+
 				for (i = 0; i < key.length; i++) {
 					n = key.charCodeAt(i);
-					
+
 					if ((n >= "A".charCodeAt(0)) && (n <= "Z".charCodeAt(0))) {
 						temp_key = temp_key + key[i];
 					}
 				}
-						
+
 				key = temp_key; // All non-alphabetic characters removed from the key message to make one long keyword.
 
 
 				for (i = 0; i < message.length; i++) {
 					n = message.charCodeAt(i);
 					d = (direction >= 0) ? 1 : -1;
-					
+
 
 					if ((n >= "A".charCodeAt(0)) && (n <= "Z".charCodeAt(0))) {
 						num_rotations = num_rotations + 1;
 						n = n - A_offset; // A = 0
-						n = Mod((n + (d * (key.charCodeAt(j) - A_offset))),26); 
+						n = Mod((n + (d * (key.charCodeAt(j) - A_offset))),26);
 						n = n + A_offset;
-						
+
 
 						debugOutput = debugOutput + message[i];
 
@@ -463,16 +463,16 @@
 					}
 					cipher = cipher + String.fromCharCode(n);
 				}
-				
+
 				cipherBox.value = cipher
 
 				if (direction >= 0) {
 					debugBox.innerHTML = debugOutput; // Only output the steps during encryption.
 				}
 			}; // End of Vigenere
-			
 
-			
+
+
 			function Base26Encrypt(inbox, outbox, base, block_size) {
 				var messageBox = document.getElementById(inbox); // Where to read in the plaintext message from.
 				var cipherBox = document.getElementById(outbox); // Where to write the encrypted ciphertext to.
@@ -493,52 +493,52 @@
 
 				for (i = 0; i < message.length; i++) {
 					n = message.charCodeAt(i);
-					
+
 					if ((n >= "A".charCodeAt(0)) && (n <= "Z".charCodeAt(0))) {
 						temp_message = temp_message + String.fromCharCode(n); // For this cipher we will remove all non-alphabetic characters.
 					}
-				}	
-				
+				}
+
 				message = temp_message;
-				
+
 				while (Mod(message.length,block_size) != 0) {
 				// This is a block cipher, so we need to pad out the message to an whole number of blocks.
 				// We add the least-common character to make it obvious later.
 					message = message + 'Z';
 				}
-				
+
 				exponent = 0;
-				
+
 				for (i = 0; i < message.length; i++) {
 					n = message.charCodeAt(i);
 					n = n - A_offset; // A = 0
-					temp_sum = n * Math.pow(base, exponent); 
+					temp_sum = n * Math.pow(base, exponent);
 					sum = sum + temp_sum;
 
 					debugOutput = debugOutput + message[i];
-					
+
 					for (j = 1; j <= exponent; j++) {
 						debugOutput = debugOutput + " * " + base;
 					}
 					debugOutput = debugOutput + " = " + (n * Math.pow(base, exponent)) + "<BR>";
 
 					exponent = Mod(exponent + 1,block_size); // Increase the exponent for each character in the block. Reset exponent when reaching a new block.
-					
+
 					if (exponent == 0){
 						cipher = cipher + " " + sum;
 						debugOutput = debugOutput + sum + "<BR><BR>";
 						sum = 0;
 					}
-					
+
 				}
-				
+
 				cipherBox.value = cipher
 
 				debugBox.innerHTML = debugOutput;
 
 			}; // End of Base26Encrypt
-			
-			
+
+
 			function Base26Decrypt(inbox, outbox, base, block_size) {
 				var messageBox = document.getElementById(inbox); // Where to read in the encrypted ciphertext from.
 				var cipherBox = document.getElementById(outbox); // Where to write the decrypted plaintext to.
@@ -554,14 +554,14 @@
 
 
 				message = messageBox.value.toUpperCase().trim(); // Convert to uppercase for simplicity.
-				
+
 				var str_array = message.split(' '); // Split the ciphertext into an array of numbers at each space.
 
 				for (i = 0; i < str_array.length; i++) {
-					// 
+					//
 					str_array[i] = str_array[i].trim() // Trim the excess whitespace; Use str_array[i].replace(/^\s*/, "").replace(/\s*$/, "") for really old browsers.;
 					sum = parseInt(str_array[i]); // Convert from string to integer.
-					
+
 					for (j = 0; j < block_size; j++) {
 						temp_sum = Mod(sum,  base);
 						sum = sum - temp_sum;
@@ -569,7 +569,7 @@
 						cipher = cipher + String.fromCharCode(temp_sum + A_offset);
 					}
 				}
-				
+
 				cipherBox.value = cipher;
 
 			}; // End of Base26Decrypt
